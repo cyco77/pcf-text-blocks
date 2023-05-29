@@ -1,0 +1,15 @@
+.main {
+  text-align: left;
+}
+
+.textBlockComponent {
+  position: relative;
+}
+
+.copyButton {
+  text-align: right;
+}
+
+.preWrap {
+  white-space: pre-wrap;
+}

@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "name": "Element 1",
+      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nMauris consequat nisi non tincidunt tristique.\nVestibulum id nisi non mi interdum suscipit vel et nisl.\nMaecenas consectetur lorem nec malesuada ullamcorper.\nNulla facilisi. Sed ullamcorper nunc nec dolor consequat, ut egestas nulla ultricies.\nCras luctus mi in malesuada finibus.\nInteger vel purus eget tellus pretium viverra vitae at nunc."
+    },
+    {
+      "name": "Element 2",
+      "value": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce tincidunt purus id odio rhoncus, at placerat lorem bibendum. Nullam pharetra lectus id nisi consectetur congue. Vivamus at tempor orci. Integer faucibus vestibulum sapien non auctor.\nProin accumsan elit a justo convallis eleifend."
+    },
+    {
+      "name": "Element 3",
+      "value": "Etiam vitae eros in ante fermentum rhoncus sed sed arcu.\nMorbi a tellus eu erat efficitur pretium.\nIn viverra bibendum nunc, vel suscipit urna iaculis ut.\nDonec finibus pulvinar odio.\nSed eget scelerisque metus.\nCurabitur accumsan justo eget augue dapibus varius.\nSed non dolor vestibulum, pharetra orci ac, accumsan purus."
+    },
+    {
+      "name": "Element 4",
+      "value": "Vestibulum cursus scelerisque nisl, in pulvinar odio interdum non.\nDonec tristique purus risus, nec tristique nisl aliquet non.\nDuis non ligula eu arcu consequat suscipit.\nCurabitur fringilla tellus sed nibh pellentesque eleifend.\nInteger at mi quis dolor condimentum tincidunt.\nUt sed lacus a mi maximus dignissim eu ac tortor."
+    },
+    {
+      "name": "Element 5",
+      "value": "Aliquam rhoncus enim ut ante congue, ut hendrerit tellus elementum.\nSuspendisse blandit convallis orci, a faucibus ex suscipit et.\nNullam eleifend tellus auctor lobortis pharetra.\nProin vestibulum, enim ac lacinia finibus, urna lacus rutrum enim, id aliquet dui metus in lectus.\nCras ac sollicitudin tellus, a feugiat est."
+    }
+  ]
+}
