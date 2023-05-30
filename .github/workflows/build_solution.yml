@@ -18,10 +18,12 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  build:
     runs-on: windows-latest
 
     steps:
+      - uses: actions/checkout@v2
+      
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
 
