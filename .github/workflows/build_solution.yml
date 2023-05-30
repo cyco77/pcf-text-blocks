@@ -27,14 +27,5 @@ jobs:
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
 
-      - name: Setup NuGet
-        uses: NuGet/setup-nuget@v1.0.5
-
-      - name: Navigate to Workspace
-        run: cd $GITHUB_WORKSPACE
-        
-      - name: Restore Packages
-        run: nuget restore Solution/Solution.csproj        
-
       - name: Build app for release
-        run: msbuild Solution/Solution.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
+        run: msbuild Solution/Solution.cdsproj -t:rebuild -verbosity:diag -property:Configuration=Release
