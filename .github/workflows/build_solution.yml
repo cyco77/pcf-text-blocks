@@ -21,11 +21,20 @@ jobs:
   build:
     runs-on: windows-latest
 
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x, 20.x]
+        
     steps:
       - uses: actions/checkout@v2
       
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
       - name: Build app for release
         run: msbuild Solution/Solution.cdsproj /t:build /restore
