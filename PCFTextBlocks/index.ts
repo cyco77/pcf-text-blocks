@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
+import React from "react";
 import Main, { IMainProps } from "./components/main/main";
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import React from "react";
 
 export class PCFTextBlocks implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
@@ -13,7 +13,6 @@ export class PCFTextBlocks implements ComponentFramework.StandardControl<IInputs
      * Empty constructor.
      */
     constructor() {
-
     }
 
     /**

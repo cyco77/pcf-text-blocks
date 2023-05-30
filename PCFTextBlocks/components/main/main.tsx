@@ -1,4 +1,4 @@
-import { MessageBar, MessageBarType, Stack, TextField } from "@fluentui/react";
+import { MessageBarType, Stack, TextField } from "@fluentui/react";
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { IInputs } from "../../generated/ManifestTypes";
@@ -15,32 +15,22 @@ export interface IMainProps {
 interface IMainState {
   textBlocks: ITextBlock[] | undefined;
   messageText?: string;
-  messageType: MessageBarType;
   filter: string | undefined;
 }
 
 const Main: React.FC<IMainProps> = (props: IMainProps) => {
-  const [state, setState] = useState<IMainState>({ textBlocks: [], messageType: MessageBarType.success, filter: "" });
+  const [state, setState] = useState<IMainState>({ textBlocks: [], filter: "" });
 
   const newsResult: IHookResult<ITextBlock[] | undefined> = useGetTextBlocksHook(props.xrmContext);
   const loadedData: ITextBlock[] | undefined = newsResult.result;
-  const loading: boolean = newsResult.loading;
 
   useEffect(() => {
-    setState({ ...state, textBlocks: loadedData });
+    setState((oldState) => ({ ...oldState, textBlocks: loadedData }));
   }, [loadedData]);
-
-  const showMessage = (text: string) => {
-    setState({ ...state, messageText: text });
-  };
-
-  if (state.textBlocks === undefined) {
-    return <>Data not loaded</>; // TODO: das muss noch schöner
-  }
 
   const items =
     state.filter !== undefined && state.filter !== ""
-      ? state.textBlocks.filter(
+      ? state.textBlocks?.filter(
           (x) =>
             x.name.toLocaleLowerCase().indexOf(state.filter as string) > -1 ||
             x.value.toLocaleLowerCase().indexOf(state.filter as string) > -1
@@ -59,9 +49,9 @@ const Main: React.FC<IMainProps> = (props: IMainProps) => {
         ></TextField>
       </Stack>
 
-      {items.map((value: ITextBlock, index: number, array: ITextBlock[]) => {
+      {items?.map((value: ITextBlock) => {
         return (
-          <div key={index}>
+          <div key={value.id}>
             <TextBlockComponent textBlock={value}></TextBlockComponent>
           </div>
         );

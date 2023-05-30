@@ -18,7 +18,7 @@ export class TextBlockService {
             const results: ITextBlock[] = [];
 
             response.entities.forEach(element => {
-                results.push({ name: element.lh_name, value: element.lh_value });
+                results.push({ id: element.lh_textblockid, name: element.lh_name, value: element.lh_value });
             });
 
             return results;
