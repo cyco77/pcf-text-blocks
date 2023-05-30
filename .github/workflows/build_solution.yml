@@ -26,4 +26,4 @@ jobs:
         uses: microsoft/setup-msbuild@v1.1
 
       - name: Build app for release
-        run: msbuild Solution/src/Other/Solution.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
+        run: msbuild Solution/Solution.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
