@@ -13,3 +13,18 @@
 .preWrap {
   white-space: pre-wrap;
 }
+
+.textBlockContent {
+  box-shadow: none;
+  margin: 0px;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid rgb(96, 94, 92);
+  border-radius: 2px;
+  background: rgb(255, 255, 255);
+  cursor: text;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  position: relative;
+}

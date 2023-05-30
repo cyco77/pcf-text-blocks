@@ -2,7 +2,7 @@
   "data": [
     {
       "name": "Element 1",
-      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nMauris consequat nisi non tincidunt tristique.\nVestibulum id nisi non mi interdum suscipit vel et nisl.\nMaecenas consectetur lorem nec malesuada ullamcorper.\nNulla facilisi. Sed ullamcorper nunc nec dolor consequat, ut egestas nulla ultricies.\nCras luctus mi in malesuada finibus.\nInteger vel purus eget tellus pretium viverra vitae at nunc."
+      "value": "<b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>.\nMauris consequat nisi non tincidunt tristique.\nVestibulum id nisi non mi interdum suscipit vel et nisl.\nMaecenas consectetur lorem nec malesuada ullamcorper.\nNulla facilisi. Sed ullamcorper nunc nec dolor consequat, ut egestas nulla ultricies.\nCras luctus mi in malesuada finibus.\nInteger vel purus eget tellus pretium viverra vitae at nunc."
     },
     {
       "name": "Element 2",

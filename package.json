@@ -1,6 +1,6 @@
 {
   "name": "pcf-project",
-  "version": "1.0.0.6",
+  "version": "1.0.0.11",
   "description": "Project containing your PowerApps Component Framework (PCF) control.",
   "scripts": {
     "build": "pcf-scripts build",
@@ -18,7 +18,7 @@
     "@fluentui/font-icons-mdl2": "^8.5.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "moment": "^2.29.4"
+    "copy-to-clipboard": "^3.3.3"
   },
   "devDependencies": {
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
