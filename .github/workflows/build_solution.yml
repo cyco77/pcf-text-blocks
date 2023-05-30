@@ -26,7 +26,7 @@ jobs:
         node-version: [12.x]
 
     env:
-      msbuildtarget: Solution/PCFTextBlocks
+      msbuildtarget: Solution
 
     steps:
       - uses: actions/checkout@v2
@@ -40,7 +40,7 @@ jobs:
         id: solution-unique-name
         uses: mavrosxristoforos/get-xml-info@1.0
         with:
-          xml-file: ${{ env.msbuildtarget }}/Other/Solution.xml
+          xml-file: ${{ env.msbuildtarget }}/src/Other/Solution.xml
           xpath: "//ImportExportXml/SolutionManifest/UniqueName"
 
       - name: Solution Version
