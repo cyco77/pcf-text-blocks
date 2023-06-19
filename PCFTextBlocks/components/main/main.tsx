@@ -37,6 +37,9 @@ const Main: React.FC<IMainProps> = (props: IMainProps) => {
         )
       : state.textBlocks;
 
+  console.log("state", state);
+  console.table(items);
+
   return (
     <div className='main'>
       <Stack tokens={containerStackTokens}>

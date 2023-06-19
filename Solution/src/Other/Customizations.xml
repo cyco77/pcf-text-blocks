@@ -761,7 +761,7 @@
               <IsFilterable>0</IsFilterable>
               <IsRetrievable>0</IsRetrievable>
               <IsLocalizable>0</IsLocalizable>
-              <Format>text</Format>
+              <Format>richtext</Format>
               <MaxLength>1048576</MaxLength>
               <displaynames>
                 <displayname description="Value" languagecode="1031" />
