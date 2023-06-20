@@ -32,8 +32,8 @@ const Main: React.FC<IMainProps> = (props: IMainProps) => {
     state.filter !== undefined && state.filter !== ""
       ? state.textBlocks?.filter(
           (x) =>
-            x.name.toLocaleLowerCase().indexOf(state.filter as string) > -1 ||
-            x.value.toLocaleLowerCase().indexOf(state.filter as string) > -1
+            x.name.toLocaleLowerCase().indexOf(state.filter?.toLocaleLowerCase() as string) > -1 ||
+            x.value.toLocaleLowerCase().indexOf(state.filter?.toLocaleLowerCase() as string) > -1
         )
       : state.textBlocks;
 
