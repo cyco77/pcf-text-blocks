@@ -10,10 +10,8 @@ export class TextBlockService {
     }
 
     public async getTextBlocks() {
-
-        // (<any>this.context.webAPI).execute();
         try {
-            const response = await this.context.webAPI.retrieveMultipleRecords("lh_textblock", "?$select=lh_name,lh_value&$filter=statecode eq 0");
+            const response = await this.context.webAPI.retrieveMultipleRecords("lh_textblock", "?$select=lh_name,lh_value&$filter=statecode eq 0&$orderby=lh_name");
 
             const results: ITextBlock[] = [];
 

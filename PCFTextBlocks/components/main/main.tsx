@@ -28,7 +28,7 @@ const Main: React.FC<IMainProps> = (props: IMainProps) => {
     setState((oldState) => ({ ...oldState, textBlocks: loadedData }));
   }, [loadedData]);
 
-  const items =
+  let items =
     state.filter !== undefined && state.filter !== ""
       ? state.textBlocks?.filter(
           (x) =>
@@ -37,8 +37,11 @@ const Main: React.FC<IMainProps> = (props: IMainProps) => {
         )
       : state.textBlocks;
 
-  console.log("state", state);
-  console.table(items);
+  if (items !== undefined && items !== null) {
+    const maxItems = items?.length > 5 ? 5 : items?.length;
+
+    items = items?.slice(0, maxItems);
+  }
 
   return (
     <div className='main'>

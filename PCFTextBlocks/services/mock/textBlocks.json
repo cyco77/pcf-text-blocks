@@ -18,12 +18,17 @@
     {
       "id": "4",
       "name": "Element 4",
-      "value": "Vestibulum cursus scelerisque nisl, in pulvinar odio interdum non.\nDonec tristique purus risus, nec tristique nisl aliquet non.\nDuis non ligula eu arcu consequat suscipit.\nCurabitur fringilla tellus sed nibh pellentesque eleifend.\nInteger at mi quis dolor condimentum tincidunt.\nUt sed lacus a mi maximus dignissim eu ac tortor."
+      "value": "<div><div data-wrapper='true' dir='ltr' style='font-size:9pt;font-family:'Segoe UI','Helvetica Neue',sans-serif;'><ul><li style='list-style-position: inside;'>111</li><li style='list-style-position: inside;'>222<ul><li style='list-style-position: inside;'>333</li><li style='list-style-position: inside;'>444</li></ul></li><li style='list-style-position: inside;'>555</li><li style='list-style-position: inside;'>666</li></ul></div></div>"
     },
     {
       "id": "5",
       "name": "Element 5",
       "value": "Aliquam rhoncus enim ut ante congue, ut hendrerit tellus elementum.\nSuspendisse blandit convallis orci, a faucibus ex suscipit et.\nNullam eleifend tellus auctor lobortis pharetra.\nProin vestibulum, enim ac lacinia finibus, urna lacus rutrum enim, id aliquet dui metus in lectus.\nCras ac sollicitudin tellus, a feugiat est."
+    },
+    {
+      "id": "6",
+      "name": "Element 6",
+      "value": "www.google.de."
     }
   ]
 }

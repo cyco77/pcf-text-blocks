@@ -1,6 +1,7 @@
 import { Icon, PrimaryButton, Stack, TextField } from "@fluentui/react";
 import * as React from "react";
 import copy from "copy-to-clipboard";
+import { useRef } from "react";
 import { ITextBlock } from "../../types/textBlock";
 import { containerStackTokens } from "../common/common";
 
@@ -13,6 +14,18 @@ const TextBlockComponent: React.FC<ITextBlockComponentProps> = (props: ITextBloc
     copy(props.textBlock.value, { format: "text/html" });
   };
 
+  const iframeElement = useRef<HTMLIFrameElement>(null);
+
+  const updateHeight = () => {
+    if (iframeElement.current !== undefined && iframeElement.current !== null) {
+      let height = iframeElement.current.contentWindow?.document.body.scrollHeight;
+      let heightValue = height !== undefined ? (height + 20).toString() + "px" : "40px";
+
+      console.log(height);
+      iframeElement.current.style.height = heightValue;
+    }
+  };
+
   return (
     <div className='textBlockComponent'>
       <Stack tokens={containerStackTokens}>
@@ -20,9 +33,7 @@ const TextBlockComponent: React.FC<ITextBlockComponentProps> = (props: ITextBloc
       </Stack>
       <Stack tokens={containerStackTokens}>
         <div className='textBlockContent'>
-          <div dangerouslySetInnerHTML={{ __html: props.textBlock.value }}></div>
-          {/* <TextField multiline autoAdjustHeight readOnly value={props.textBlock.value}></TextField> */}
-          {/* <pre className='preWrap'>{props.textBlock.value}</pre> */}
+          <iframe srcDoc={props.textBlock.value} ref={iframeElement} onLoad={() => updateHeight()} />
         </div>
         <div className='copyButton'>
           <PrimaryButton onClick={() => copyToClipboard()}>

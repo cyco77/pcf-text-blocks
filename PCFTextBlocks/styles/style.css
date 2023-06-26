@@ -28,3 +28,8 @@
   align-items: stretch;
   position: relative;
 }
+
+.textBlockContent iframe {
+  border: 0;
+  width: 100%;
+}
